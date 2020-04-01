@@ -11,4 +11,9 @@
     <string name="usario">Usario</string>
     <string name="tutor">Tutor</string>
     <string name="ingresar">Ingresar</string>
+    <string name="carrera">Carrera</string>
+    <string name="curso">Curso</string>
+    <string name="contacto">Contacto</string>
+    <string name="comentario">Comentarios</string>
+    <string name="guardar">Guardar</string>
 </resources>

@@ -11,18 +11,6 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/infoTutor"
-            android:layout_width="173dp"
-            android:layout_height="34dp"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="44dp"
-            android:text="@string/info"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/ImagenTutor"
-            app:layout_constraintTop_toBottomOf="@+id/nombreTutor1" />
-
-        <TextView
             android:id="@+id/nombreTutor1"
             android:layout_width="185dp"
             android:layout_height="55dp"
@@ -30,8 +18,7 @@
             android:text="@string/nombre_del_tutor"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.59"
-            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
             app:layout_constraintTop_toTopOf="parent" />
 
         <RatingBar
@@ -45,7 +32,7 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/imageView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -54,17 +41,138 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:src="@tools:sample/avatars" />
 
-        <EditText
-            android:id="@+id/editText3"
-            android:layout_width="320dp"
-            android:layout_height="407dp"
-            android:layout_marginBottom="30dp"
-            android:ems="10"
-            android:gravity="start|top"
-            android:inputType="textMultiLine"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="374dp"
+            android:layout_height="417dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rateTutor1">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/info"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nombre_del_tutor"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="64dp"
+                android:layout_height="30dp"
+                android:text="@string/carrera"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/curso"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contacto"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+            <EditText
+                android:id="@+id/editText5"
+                android:layout_width="368dp"
+                android:layout_height="232dp"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:text="@string/comentario"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+            <Button
+                android:id="@+id/bttGuardar"
+                android:layout_width="89dp"
+                android:layout_height="33dp"
+                android:background="#14DA1C"
+                android:fontFamily="@font/roboto"
+                android:text="@string/guardar"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText5" />
+
+            <TextView
+                android:id="@+id/txtVnombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="24dp"
+                android:text="TextView"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/textView9"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtVCarrera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/textView13"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+            <TextView
+                android:id="@+id/txtVCurso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="32dp"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/textView14"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+            <TextView
+                android:id="@+id/txtVContacto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="59dp"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/textView15"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/InfoTutor"
+            android:layout_width="173dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="28dp"
+            android:text="@string/info"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintTop_toBottomOf="@+id/nombreTutor1" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
