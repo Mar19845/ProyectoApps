@@ -2,7 +2,7 @@
     <string name="app_name">Tutonder</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="register">REGISTRO DE USUARIOS</string>
     <string name="nombre_del_tutor">Nombre del Tutor</string>
     <string name="info">Info</string>
     <string name="todo">TODO</string>
