@@ -11,14 +11,9 @@
     <string name="usario">Usario</string>
     <string name="tutor">Tutor</string>
     <string name="ingresar">Ingresar</string>
-<<<<<<< HEAD
-    <string name="curso">Curso</string>
-    <string name="guardar">Guardar</string>
-=======
     <string name="informacion">Información</string>
     <string name="cursos">Cursos</string>
     <string name="carrera">Carrera</string>
     <string name="comentario">Comentario</string>
     <string name="contacto">Contacto</string>
->>>>>>> 56c25c0c730cefa87ca999c1e464325cfa705ebb
 </resources>
