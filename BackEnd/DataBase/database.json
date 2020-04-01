@@ -1,0 +1,58 @@
+{
+    "users": [
+        {"id" : "19897",
+         "nombre" : "McAbstract",
+         "carrera" : "Computacion",
+         "contacto" : "pro@uvg.edu.gt",
+         "password" : "123",
+         "tipo" : 1,
+         "cursos" : ["Fisica", "Calculo", "Quimica"],
+         "detalles" : "El tutor mas pro de los pro",
+         "calificacion": 5.0,
+         "comentarios" : [
+             {"nombre":"Juanma", "texto":"Demasiado pro este tutor"},
+             {"nombre":"Cotto", "texto":"Gracias a este compa saque 100 en calculo!!!"}
+            ]
+        },
+
+        {"id" : "19324",
+            "nombre" : "SrManiac",
+            "carrera" : "Computacion",
+            "contacto" : "maniac@uvg.edu.gt",
+            "password" : "123",
+            "tipo" : 1,
+            "cursos" : ["Fisica", "Calculo"],
+            "detalles" : "El que te hace ganar calculo si o si",
+            "calificacion": 3.5,
+            "comentarios" : [
+                {"nombre":"Juanma", "texto":"Excelente tutor"},
+                {"nombre":"Eduaardo", "texto":"Muy buen tutor pero no se pasa las ejercitaciones"},
+                {"nombre":"Carlos", "texto":"Me llega"}
+               ]
+           },
+
+           {"id" : "19845",
+            "nombre" : "Juanma",
+            "carrera" : "Computacion",
+            "contacto" : "juanma@uvg.edu.gt",
+            "password" : "123",
+            "tipo" : 0,
+            "cursos" : [],
+            "detalles" : "",
+            "calificacion": 0,
+            "comentarios" : []
+           },
+
+           {"id" : "19999",
+            "nombre" : "Eduardo",
+            "carrera" : "Computacion",
+            "contacto" : "edu@uvg.edu.gt",
+            "password" : "123",
+            "tipo" : 0,
+            "cursos" : [],
+            "detalles" : "",
+            "calificacion": 0,
+            "comentarios" : []
+           }
+    ]
+}
