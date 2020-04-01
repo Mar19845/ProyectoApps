@@ -4,7 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
     app:startDestination="@id/login">
-
+    <fragment
+        android:id="@+id/listaTutores"
+        android:name="com.example.tutonder.ListaTutores"
+        android:label="fragment_lista_tutores"
+        tools:layout="@layout/fragment_lista_tutores" >
+        <action
+            android:id="@+id/action_listaTutores_to_tutor"
+            app:destination="@id/tutor" />
+        <action
+            android:id="@+id/action_listaTutores_to_editarTutor"
+            app:destination="@id/editarTutor" />
+    </fragment>
+    <fragment
+        android:id="@+id/tutor"
+        android:name="com.example.tutonder.Tutor"
+        android:label="fragment_tutor"
+        tools:layout="@layout/fragment_tutor" />
+    <fragment
+        android:id="@+id/editarTutor"
+        android:name="com.example.tutonder.editarTutor"
+        android:label="fragment_editar_tutor"
+        tools:layout="@layout/fragment_editar_tutor" />
     <fragment
         android:id="@+id/login"
         android:name="com.example.tutonder.Login"
@@ -22,9 +43,4 @@
         android:name="com.example.tutonder.Register"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" />
-    <fragment
-        android:id="@+id/listaTutores"
-        android:name="com.example.tutonder.ListaTutores"
-        android:label="fragment_lista_tutores"
-        tools:layout="@layout/fragment_lista_tutores" />
 </navigation>
