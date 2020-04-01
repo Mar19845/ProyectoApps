@@ -57,78 +57,124 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="36dp"
             android:layout_marginTop="24dp"
-            android:layout_marginBottom="16dp"
             android:text="@string/informacion"
-            app:layout_constraintBottom_toTopOf="@+id/NombreTutor1"
+            app:layout_constraintBottom_toTopOf="@+id/iNombreTutor1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/RateTutor" />
 
         <TextView
-            android:id="@+id/NombreTutor1"
+            android:id="@+id/iNombreTutor1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
             android:text="@string/nombre_del_tutor"
-            app:layout_constraintBottom_toTopOf="@+id/CarrerraTutor"
+            app:layout_constraintBottom_toTopOf="@+id/iCarrerraTutor"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.12"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/CarrerraTutor"
+            android:id="@+id/iCarrerraTutor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
             android:text="@string/carrera"
-            app:layout_constraintBottom_toTopOf="@+id/CursosDados"
+            app:layout_constraintBottom_toTopOf="@+id/iCursosDados"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.098"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/CursosDados"
+            android:id="@+id/iCursosDados"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
             android:text="@string/cursos"
-            app:layout_constraintBottom_toTopOf="@+id/ConctactoTutor"
+            app:layout_constraintBottom_toTopOf="@+id/iConctactoTutor"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.087"
+            app:layout_constraintHorizontal_bias="0.098"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/ConctactoTutor"
+            android:id="@+id/iConctactoTutor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
             android:text="@string/contacto"
             app:layout_constraintBottom_toTopOf="@+id/Comentario"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.09"
+            app:layout_constraintHorizontal_bias="0.102"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/Comentario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
+            android:layout_marginBottom="16dp"
             android:text="@string/comentario"
             app:layout_constraintBottom_toTopOf="@+id/CajaComentarios"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.095"
+            app:layout_constraintHorizontal_bias="0.107"
             app:layout_constraintStart_toStartOf="parent" />
 
         <EditText
             android:id="@+id/CajaComentarios"
             android:layout_width="350dp"
             android:layout_height="237dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="68dp"
             android:ems="10"
             android:gravity="start|top"
             android:inputType="textMultiLine"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.59"
+            app:layout_constraintHorizontal_bias="0.491"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/BotonGuardar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/guardar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/TutorNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="68dp"
+            android:text="           "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.133"
+            app:layout_constraintStart_toEndOf="@+id/iNombreTutor1"
+            app:layout_constraintTop_toBottomOf="@+id/RateTutor" />
+
+        <TextView
+            android:id="@+id/Carrera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="           "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.327"
+            app:layout_constraintStart_toEndOf="@+id/iCarrerraTutor"
+            app:layout_constraintTop_toBottomOf="@+id/TutorNombre" />
+
+        <TextView
+            android:id="@+id/Contacto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="     "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.277"
+            app:layout_constraintStart_toEndOf="@+id/iConctactoTutor"
+            app:layout_constraintTop_toBottomOf="@+id/Cursos" />
+
+        <TextView
+            android:id="@+id/Cursos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="     "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.309"
+            app:layout_constraintStart_toEndOf="@+id/iCursosDados"
+            app:layout_constraintTop_toBottomOf="@+id/Carrera" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
