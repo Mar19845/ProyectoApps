@@ -12,17 +12,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            app:layout_constraintBottom_toTopOf="@+id/RateTutor"
+            android:layout_marginTop="48dp"
+            android:contentDescription="@string/todo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.43"
-            tools:src="@tools:sample/avatars"
-            android:contentDescription="@string/todo" />
+            tools:src="@tools:sample/avatars" />
 
         <TextView
             android:id="@+id/NombreTutor"
-            android:layout_width="185dp"
-            android:layout_height="55dp"
+            android:layout_width="199dp"
+            android:layout_height="37dp"
             android:layout_marginTop="48dp"
             android:text="@string/nombre_del_tutor"
             android:textSize="20sp"
@@ -33,7 +32,7 @@
 
         <TextView
             android:id="@+id/InfoTutor"
-            android:layout_width="173dp"
+            android:layout_width="194dp"
             android:layout_height="34dp"
             android:layout_marginTop="28dp"
             android:text="@string/info"
@@ -44,12 +43,92 @@
 
         <RatingBar
             android:id="@+id/RateTutor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="452dp"
+            android:layout_width="245dp"
+            android:layout_height="38dp"
+            android:layout_marginBottom="484dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.415"
+            app:layout_constraintHorizontal_bias="0.837"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/Informacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/informacion"
+            app:layout_constraintBottom_toTopOf="@+id/NombreTutor1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/RateTutor" />
+
+        <TextView
+            android:id="@+id/NombreTutor1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/nombre_del_tutor"
+            app:layout_constraintBottom_toTopOf="@+id/CarrerraTutor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/CarrerraTutor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/carrera"
+            app:layout_constraintBottom_toTopOf="@+id/CursosDados"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.098"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/CursosDados"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/cursos"
+            app:layout_constraintBottom_toTopOf="@+id/ConctactoTutor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.087"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/ConctactoTutor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/contacto"
+            app:layout_constraintBottom_toTopOf="@+id/Comentario"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.09"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/Comentario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="@string/comentario"
+            app:layout_constraintBottom_toTopOf="@+id/CajaComentarios"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.095"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/CajaComentarios"
+            android:layout_width="350dp"
+            android:layout_height="237dp"
+            android:layout_marginBottom="16dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.59"
             app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
