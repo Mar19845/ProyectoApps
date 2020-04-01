@@ -9,13 +9,15 @@
 
         <TextView
             android:id="@+id/Titulo"
+            style="@style/titulos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="104dp"
             android:text="@string/bienvenidos"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.247" />
 
         <EditText
             android:id="@+id/Usuario"
@@ -31,6 +33,7 @@
 
         <TextView
             android:id="@+id/TextUsuario"
+            style="@style/subtitulos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -44,6 +47,7 @@
 
         <TextView
             android:id="@+id/TextContrasena"
+            style="@style/subtitulos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -57,17 +61,16 @@
 
         <Button
             android:id="@+id/botonIngresar"
-            android:layout_width="358dp"
-            android:layout_height="50dp"
+            style="@style/boton"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
+            android:layout_marginBottom="44dp"
             android:text="@string/ingresar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.193"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/checkBoxTutor"
-            app:layout_constraintVertical_bias="0.257" />
+            app:layout_constraintVertical_bias="0.904" />
 
         <CheckBox
             android:id="@+id/checkBoxTutor"
