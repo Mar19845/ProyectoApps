@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import com.example.tutonder.databinding.FragmentLoginBinding
 
 /**
  * A simple [Fragment] subclass.
@@ -16,7 +18,9 @@ class Login : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login, container, false)
+        val bindingLogin = DataBindingUtil.inflate<FragmentLoginBinding>(inflater,
+            R.layout.fragment_login,container,false)
+        return bindingLogin.root
     }
 
 }
