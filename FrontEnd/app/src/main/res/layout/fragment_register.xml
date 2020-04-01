@@ -13,32 +13,22 @@
 
         <TextView
             android:id="@+id/textView0"
-            android:layout_width="225dp"
-            android:layout_height="22dp"
-            android:layout_margin="10dp"
-            android:fontFamily="sans-serif-black"
             android:text="@string/register"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.022" />
+            app:layout_constraintVertical_bias="0.022"
+            style="@style/titulos" />
 
         <TextView
             android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="35dp"
             android:text="Nombre:"
-            android:textColor="#000000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.102"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView0" />
+            app:layout_constraintTop_toBottomOf="@+id/textView0"
+            style="@style/subtitulos" />
 
         <EditText
             android:id="@+id/editTextNombre"
@@ -50,6 +40,7 @@
             android:ems="10"
             android:hint="Mi nombre"
             android:inputType="textPersonName"
+            android:textColor="#000000"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -195,19 +186,11 @@
 
         <Button
             android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
-            android:background="#4CAF50"
-            android:paddingLeft="25dp"
-            android:paddingTop="15dp"
-            android:paddingRight="25dp"
-            android:paddingBottom="15dp"
             android:text="REGISTRARSE"
-            android:textColor="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/boton" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
