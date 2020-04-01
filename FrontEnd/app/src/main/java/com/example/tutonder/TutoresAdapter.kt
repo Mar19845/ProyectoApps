@@ -19,8 +19,8 @@ class TutoresAdapter internal constructor(context: Context): RecyclerView.Adapte
     override fun onBindViewHolder(holder: ViewHolderData, position: Int) {
         val tutores=TutoresList[position]
 
-        holder.tutorItenView.text=tutores.get(0)
-        holder.tutor.text=tutores.get(1)
+        holder.tutorItenView.text= tutores[0]
+        holder.tutor.text= tutores[1]
     }
 
     internal fun setQuestions(tutores: ArrayList<ArrayList<String>>){
