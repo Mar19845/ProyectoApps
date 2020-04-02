@@ -9,10 +9,7 @@
          "cursos" : ["Fisica", "Calculo", "Quimica"],
          "detalles" : "El tutor mas pro de los pro",
          "calificacion": 5.0,
-         "comentarios" : [
-             {"nombre":"Juanma", "texto":"Demasiado pro este tutor"},
-             {"nombre":"Cotto", "texto":"Gracias a este compa saque 100 en calculo!!!"}
-            ]
+         "comentarios" : ["Juanma: Demasiado pro este tutor", "Cotto: Gracias a este compa saque 100 en calculo!!!"]
         },
 
         {"id" : "19324",
@@ -24,11 +21,7 @@
             "cursos" : ["Fisica", "Calculo"],
             "detalles" : "El que te hace ganar calculo si o si",
             "calificacion": 3.5,
-            "comentarios" : [
-                {"nombre":"Juanma", "texto":"Excelente tutor"},
-                {"nombre":"Eduaardo", "texto":"Muy buen tutor pero no se pasa las ejercitaciones"},
-                {"nombre":"Carlos", "texto":"Me llega"}
-               ]
+            "comentarios" : ["Juanma: Excelente tutor", "Eduardo: Muy buen tutor pero no se pasa las ejercitaciones","Carlos: Me llega"]
            },
 
            {"id" : "19845",

@@ -26,6 +26,18 @@ app.get('/usuarios', (req, res)=>{
     res.send(database);
 });
 
+app.get('/usuarios/:id', (req, res)=>{
+    var usuarios = database.users;
+    var usuario1 = {}
+    for(i in usuarios){
+        usuario = usuarios[i];
+        if(usuario.id == req.params.id){
+            usuario1 = usuario
+        }
+    }
+    res.send(JSON.stringify(usuario1));
+});
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log(`Server started on Port ${PORT}`));
