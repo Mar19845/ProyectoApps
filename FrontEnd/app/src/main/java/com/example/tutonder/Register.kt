@@ -20,11 +20,12 @@ class Register : Fragment() {
     ): View? {
         val bindingRegister = DataBindingUtil.inflate<FragmentRegisterBinding>(inflater,
             R.layout.fragment_register,container,false)
-        return bindingRegister.root
+        
 
         Log.i("RegisterViewModel", "Called ViewModelProviders.of")
         viewModel = ViewModelProviders.of(this).get(RegisterViewModel::class.java)
-
+        bindingRegister.button3.SetOnClickListener{getText() }
         
+        return bindingRegister.root
     }
 }
