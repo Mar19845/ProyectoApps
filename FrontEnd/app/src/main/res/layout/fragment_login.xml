@@ -90,10 +90,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.124"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Contraseña" />
+            app:layout_constraintTop_toBottomOf="@+id/Contrasena" />
 
         <EditText
-            android:id="@+id/Contraseña"
+            android:id="@+id/Contrasena"
             android:layout_width="295dp"
             android:layout_height="49dp"
             android:layout_marginStart="16dp"
