@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
+import com.example.tutonder.preferences.SharedPreference
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,6 +13,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val navController = this.findNavController(R.id.myNavHostFragment)
         NavigationUI.setupActionBarWithNavController(this,navController)
+
+        val sharedPreference:SharedPreference= SharedPreference(this)
+
+        if(sharedPreference.getValueBoolean("logged")) {
+            this.findNavController(R.id.myNavHostFragment).navigate(R.id.action_login_to_listaTutores)
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {
