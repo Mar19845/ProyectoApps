@@ -3,9 +3,10 @@ package com.example.tutonder
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.tutonder.network.User
 
 class RegisterViewModel: ViewModel() {
-    private val responseReceived = MutableLiveData<String>()
+    private val responseReceived = MutableLiveData<User>()
     var carne=""
     var nombre=""
     var carrera=""
