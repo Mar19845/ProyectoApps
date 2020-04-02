@@ -7,8 +7,8 @@ data class User(
     val contacto: String,
     val password: String,
     val tipo: Int,
-    val cursos: List<String>,
-    val detalles: String,
-    val calificacion: Double,
-    val comentarios: List<String>
+    val cursos: List<String>?,
+    val detalles: String?,
+    val calificacion: Double?,
+    val comentarios: List<String>?
 )
