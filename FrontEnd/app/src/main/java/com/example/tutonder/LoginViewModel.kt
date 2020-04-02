@@ -3,9 +3,7 @@ package com.example.tutonder
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class ListaViewModel : ViewModel() {
+class LoginViewModel : ViewModel() {
     private val responseReceived = MutableLiveData<String>()
-    private var lista=ArrayList<String>()
-
 
 }

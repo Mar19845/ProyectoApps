@@ -1,9 +1,11 @@
 package com.example.tutonder
 
 import android.util.Log
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class RegisterViewModel: ViewModel() {
+    private val responseReceived = MutableLiveData<String>()
     var carne=""
     var nombre=""
     var carrera=""
