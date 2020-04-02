@@ -6,7 +6,7 @@
     <data>
         <variable
             name="encuestaViewModel"
-            type="com.example.lab51.EncuestaViewModel">
+            type="com.example.tutonder.LoginViewModel">
 
         </variable>
     </data>
