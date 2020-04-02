@@ -60,4 +60,8 @@ dependencies {
 
     // Retrofit Coroutines Support
     implementation "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$version_retrofit_coroutines_adapter"
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+
+    //Lifecycle
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
 }
