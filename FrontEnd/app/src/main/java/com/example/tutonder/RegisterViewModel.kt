@@ -13,7 +13,7 @@ class RegisterViewModel: ViewModel() {
 
     private lateinit var wordList: MutableList<String>
 
-    private fun getText(id:String, nom:String, carr:String, cont:String, pass1:String, pass2:String){
+    fun getText(id:String, nom:String, carr:String, cont:String, pass1:String, pass2:String){
         carne=id
         nombre=nom
         carrera=carr
