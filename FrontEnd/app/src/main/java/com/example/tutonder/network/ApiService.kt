@@ -9,7 +9,7 @@ import retrofit2.http.GET
 import retrofit2.Call
 import retrofit2.http.Path
 
-private const val BASE_URL = "https://3a6fac48.ngrok.io/"
+private const val BASE_URL = "https://b1085e96.ngrok.io/"
 
 private val moshi = Moshi.Builder()
     .add(KotlinJsonAdapterFactory())
@@ -24,12 +24,15 @@ private val retrofit = Retrofit.Builder()
 interface GitApiService {
 
     @GET("tutores")
-    fun getTutores(@Path("username") username:String): Call<List<User>>
+    fun getTutores(): Call<List<User>>
 
     @GET("usuarios")
-    fun getUsers(@Path("username") username: String): Call<List<User>>
+    fun getUsers(): Call<List<User>>
+
+    @GET("usuarios/{id}")
+    fun getUser(@Path("id") id: String): Call<User>
 }
 
-object GitApi {
+object TutoApi {
     val retrofitService : GitApiService by lazy { retrofit.create(GitApiService::class.java) }
 }
