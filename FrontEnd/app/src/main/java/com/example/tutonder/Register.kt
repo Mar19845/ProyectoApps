@@ -7,11 +7,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProviders
 import com.example.tutonder.databinding.FragmentLoginBinding
 import com.example.tutonder.databinding.FragmentRegisterBinding
 
 
 class Register : Fragment() {
+    private lateinit var viewModel:RegisterViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,6 +24,6 @@ class Register : Fragment() {
         return bindingRegister.root
 
         Log.i("RegisterViewModel", "Called ViewModelProviders.of")
-        viewModel = ViewModelProviders.of(this).get(GameViewModel::class.java)
+        viewModel = ViewModelProviders.of(this).get(RegisterViewModel::class.java)
     }
 }

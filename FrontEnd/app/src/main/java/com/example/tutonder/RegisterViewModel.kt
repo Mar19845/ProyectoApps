@@ -11,5 +11,5 @@ class RegisterViewModel: ViewModel() {
         super.onCleared()
         Log.i("RegisterViewModel", "RegisterViewModel destroyed!")
     }
-    private lateinit var viewModel:RegisterViewModel
+
 }
