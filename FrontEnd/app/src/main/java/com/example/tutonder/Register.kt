@@ -24,5 +24,7 @@ class Register : Fragment() {
 
         Log.i("RegisterViewModel", "Called ViewModelProviders.of")
         viewModel = ViewModelProviders.of(this).get(RegisterViewModel::class.java)
+
+        
     }
 }
