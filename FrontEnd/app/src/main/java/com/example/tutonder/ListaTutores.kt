@@ -5,7 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.example.tutonder.databinding.FragmentListaTutoresBinding
+import com.example.tutonder.databinding.FragmentLoginBinding
 
 /**
  * A simple [Fragment] subclass.
@@ -16,9 +19,9 @@ class ListaTutores : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_lista_tutores, container, false)
-
+        val bindingListaTutores = DataBindingUtil.inflate<FragmentListaTutoresBinding>(inflater,
+            R.layout.fragment_lista_tutores,container,false)
+        return bindingListaTutores.root
     }
 
 }
