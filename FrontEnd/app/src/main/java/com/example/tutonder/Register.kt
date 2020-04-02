@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
-import com.example.tutonder.databinding.FragmentLoginBinding
 import com.example.tutonder.databinding.FragmentRegisterBinding
 
 
