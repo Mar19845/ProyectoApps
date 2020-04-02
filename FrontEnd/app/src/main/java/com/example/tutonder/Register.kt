@@ -33,7 +33,7 @@ class Register : Fragment() {
             var pass2 = bindingRegister.editTextPassword2.text.toString()
             viewModel.getText(id,nom,carr,cont,pass1,pass2)
         }
-        
+
         return bindingRegister.root
     }
 }

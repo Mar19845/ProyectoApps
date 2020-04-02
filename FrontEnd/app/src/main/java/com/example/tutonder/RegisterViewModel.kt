@@ -29,5 +29,4 @@ class RegisterViewModel: ViewModel() {
         super.onCleared()
         Log.i("RegisterViewModel", "RegisterViewModel destroyed!")
     }
-
 }
