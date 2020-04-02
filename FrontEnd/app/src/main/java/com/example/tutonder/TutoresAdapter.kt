@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.text_item_view.view.*
 
 class TutoresAdapter internal constructor(context: Context): RecyclerView.Adapter<TutoresAdapter.ViewHolderData>(){
 
@@ -20,7 +21,7 @@ class TutoresAdapter internal constructor(context: Context): RecyclerView.Adapte
         val tutores=TutoresList[position]
 
         holder.tutorItenView.text= tutores[0]
-        holder.tutor.text= tutores[1]
+        holder.tutorItenView.bttVerPerfil.setText(tutores[0])
     }
 
     internal fun setQuestions(tutores: ArrayList<ArrayList<String>>){
