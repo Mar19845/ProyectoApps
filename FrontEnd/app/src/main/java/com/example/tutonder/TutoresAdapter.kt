@@ -12,7 +12,7 @@ class TutoresAdapter internal constructor(context: Context): RecyclerView.Adapte
 
     private var inflater: LayoutInflater = LayoutInflater.from(context)
     private var tutoresList= ArrayList<ArrayList<String>>()
-    
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderData {
         val itemView=inflater.inflate(R.layout.text_item_view,parent,false)
         return ViewHolderData((itemView))
