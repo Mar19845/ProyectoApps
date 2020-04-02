@@ -16,4 +16,6 @@
     <string name="comentario">Comentario</string>
     <string name="contacto">Contacto</string>
     <string name="verperfil">Ver Perfil</string>
+    <string name="guardar">Guardar</string>
+    <string name="curso">Curso</string>
 </resources>
