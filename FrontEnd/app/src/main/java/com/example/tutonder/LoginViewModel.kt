@@ -11,6 +11,9 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class LoginViewModel : ViewModel() {
+
+    lateinit var message: String
+
     private var responseReceived = MutableLiveData<User>()
     val userResponse: LiveData<User>
         get() = responseReceived
@@ -20,12 +23,12 @@ class LoginViewModel : ViewModel() {
     }
 
     fun getUser(id:String){
-        TutoApi.retrofitService.getUser(id).enqueue(object: Callback<User> {
+        TutoApi.retrofitService.getUser(id).enqueue(object : Callback<User> {
             override fun onResponse(call: Call<User>, response: Response<User>) {
-                if(response.isSuccessful){
+                if (response.isSuccessful) {
                     //Guardar body de la respuesta en el mutable live data
                     responseReceived.value = response?.body()
-                }else{
+                } else {
                 }
             }
             override fun onFailure(call: Call<User>, t: Throwable) {

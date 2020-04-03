@@ -26,4 +26,9 @@ class MainActivity : AppCompatActivity() {
         return navController.navigateUp()
     }
 
+    public fun saveData(key:String, value:Boolean){
+        val sharedPreference:SharedPreference= SharedPreference(this)
+        sharedPreference.save(key,value)
+    }
+
 }
