@@ -32,7 +32,6 @@ class ListaViewModel : ViewModel() {
             override fun onFailure(call: Call<List<User>>, t: Throwable) {
                 t?.printStackTrace()
             }
-
         })
     }
 }

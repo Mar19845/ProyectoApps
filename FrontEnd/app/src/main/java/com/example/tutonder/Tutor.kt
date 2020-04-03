@@ -23,27 +23,38 @@ class Tutor : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val bindingTutor = DataBindingUtil.inflate<FragmentTutorBinding>(inflater,
-            R.layout.fragment_tutor,container,false)
+        val bindingTutor = DataBindingUtil.inflate<FragmentTutorBinding>(
+            inflater,
+            R.layout.fragment_tutor, container, false
+        )
 
         viewModel = ViewModelProviders.of(this).get(TutorViewModel::class.java)
-        val usuario: LiveData<User> = viewModel.userResponse
+        val tutor: LiveData<User> = viewModel.userResponse
 
-        bindingTutor.botonIngresar.setOnClickListener(){
-            viewModel.getUser(bindingTutor.Usuario.text.toString())
-            usuario.observe(viewLifecycleOwner, Observer {
-                Toast.makeText(context, usuario.value.toString(), Toast.LENGTH_SHORT).show()
-                if(usuario.value == null){
-                    Toast.makeText(context,"No se ha encontrado al usuario :(", Toast.LENGTH_LONG).show()
-                }else{
-                    if(usuario.value!!.password == bindingTutor.Contrasena.text.toString()){
-                        Toast.makeText(context,"Logged :)", Toast.LENGTH_SHORT).show()
-                    }else{
-                        Toast.makeText(context,"Parece que tu contrasena es incorrecta...", Toast.LENGTH_LONG).show()
-                    }
+
+        viewModel.getUser("aqui necesita saber el nombre que escogio el ususario antes")
+        tutor.observe(viewLifecycleOwner, Observer {
+            Toast.makeText(context, tutor.value.toString(), Toast.LENGTH_SHORT).show()
+            if (tutor.value == null) {
+                Toast.makeText(context, "No se ha encontrado al tutor seleccionado :(", Toast.LENGTH_LONG)
+                    .show()
+            } else {
+                bindingTutor.NombreTutor.setText(tutor.value!!.nombre)
+                bindingTutor.InfoTutor.setText(tutor.value!!.detalles)
+                val rate = bindingTutor.RateTutor.rating
+                bindingTutor.TutorNombre.setText(tutor.value!!.nombre)
+                bindingTutor.Carrera.setText(tutor.value!!.carrera)
+                // como pongo el list del usuario aqui
+                bindingTutor.Cursos.setText(tutor.value!!.cursos.toString())
+                bindingTutor.Contacto.setText(tutor.value!!.contacto)
+                bindingTutor.BotonGuardar.setOnClickListener(){
+                    val comentario=bindingTutor.CajaComentarios.toString()
+                    //tutor.value!!.comentarios= comentario
+
                 }
-            })
-        }
+            }
+        })
+
 
 
 
