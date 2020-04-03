@@ -23,46 +23,30 @@ class ListaTutores : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        val bindingListaTutores = DataBindingUtil.inflate<FragmentListaTutoresBinding>(inflater,
-            R.layout.fragment_lista_tutores,container,false)
-
-
+    ): View {
+        val bindingListaTutores = DataBindingUtil.inflate<FragmentListaTutoresBinding>(
+            inflater,
+            R.layout.fragment_lista_tutores, container, false
+        )
 
         viewModel = ViewModelProviders.of(this).get(ListaViewModel::class.java)
         val tutor: LiveData<List<User>> = viewModel.userResponse
 
-        bindingListaTutores.button2.setOnClickListener(){
+        tutor.observe(viewLifecycleOwner, Observer {
+            val tutors = tutor.value
+        })
+
+        bindingListaTutores.button2.setOnClickListener() {
             viewModel.getUser(bindingListaTutores.editText.text.toString())
-            tutor.observe(viewLifecycleOwner, Observer {
-                Toast.makeText(context, tutor.value.toString(), Toast.LENGTH_SHORT).show()
-                if(tutor.value == null){
-                    Toast.makeText(context,"No se ha encontrado al usuario :(", Toast.LENGTH_LONG).show()
-                }else{
-                    Toast.makeText(context,"Se encuentra el usuario :(", Toast.LENGTH_LONG).show()
-                }
-            })
+            Toast.makeText(context, tutor.value.toString(), Toast.LENGTH_SHORT).show()
+
+            if (tutor.value == null) {
+                Toast.makeText(context, "No se ha encontrado al usuario :(", Toast.LENGTH_LONG)
+                    .show()
+            } else {
+                Toast.makeText(context, "Se encuentra el usuario :(", Toast.LENGTH_LONG).show()
+            }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         return bindingListaTutores.root
     }
 }
