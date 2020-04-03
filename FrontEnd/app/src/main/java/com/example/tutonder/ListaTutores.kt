@@ -30,10 +30,10 @@ class ListaTutores : Fragment() {
 
 
         viewModel = ViewModelProviders.of(this).get(ListaViewModel::class.java)
-        val usuario: LiveData<User> = viewModel.userResponse
+        val usuario: LiveData<List<User>> = viewModel.userResponse
 
-        bindingListaTutores.botonIngresar.setOnClickListener(){
-            viewModel.getUser(bindingListaTutores.Usuario.text.toString())
+        bindingListaTutores.button2.setOnClickListener(){
+            viewModel.getUser(bindingListaTutores.editText.text.toString())
             usuario.observe(viewLifecycleOwner, Observer {
                 Toast.makeText(context, usuario.value.toString(), Toast.LENGTH_SHORT).show()
                 if(usuario.value == null){

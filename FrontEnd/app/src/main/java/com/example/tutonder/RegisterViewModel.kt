@@ -11,32 +11,6 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class RegisterViewModel: ViewModel() {
-    /**
-    var carne=""
-    var nombre=""
-    var carrera=""
-    var contacto=""
-    var password1=""
-    var password2=""
-    fun getText(id:String, nom:String, carr:String, cont:String, pass1:String, pass2:String){
-        carne=id
-        nombre=nom
-        carrera=carr
-        contacto = cont
-        password1 = pass1
-        password2 = pass2
-    }
-
-    init{
-        Log.i("RegisterViewModel", "GameViewModel created!")
-    }
-    override fun onCleared(){
-        super.onCleared()
-        Log.i("RegisterViewModel", "RegisterViewModel destroyed!")
-    }
-    **/
-
-
     private var responseReceived = MutableLiveData<User>()
     val userResponse: LiveData<User>
         get() = responseReceived

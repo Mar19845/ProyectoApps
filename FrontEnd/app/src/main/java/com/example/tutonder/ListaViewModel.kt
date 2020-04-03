@@ -11,26 +11,28 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class ListaViewModel : ViewModel() {
-    private var responseReceived = MutableLiveData<User>()
-    val userResponse: LiveData<User>
+    private var responseReceived = MutableLiveData<List<User>>()
+    val userResponse: LiveData<List<User>>
         get() = responseReceived
 
     init{
-        Log.i("Request", "Login User")
+        Log.i("Request", "Tutors List")
     }
 
     fun getUser(id:String){
-        TutoApi.retrofitService.getUser(id).enqueue(object: Callback<User> {
-            override fun onResponse(call: Call<User>, response: Response<User>) {
+        TutoApi.retrofitService.getUsers().enqueue(object: Callback<List<User>> {
+            override fun onResponse(call: Call<List<User>>, response: Response<List<User>>) {
                 if(response.isSuccessful){
-                    //Guardar body de la respuesta en el mutable live data
+                    //Guarda la lista de usuarios
                     responseReceived.value = response?.body()
                 }else{
                 }
             }
-            override fun onFailure(call: Call<User>, t: Throwable) {
+
+            override fun onFailure(call: Call<List<User>>, t: Throwable) {
                 t?.printStackTrace()
             }
+
         })
     }
 }
