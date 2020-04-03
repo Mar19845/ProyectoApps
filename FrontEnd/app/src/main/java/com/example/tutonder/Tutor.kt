@@ -41,10 +41,11 @@ class Tutor : Fragment() {
             } else {
                 bindingTutor.NombreTutor.setText(tutor.value!!.nombre)
                 bindingTutor.InfoTutor.setText(tutor.value!!.detalles)
-                bindingTutor.RateTutor
+                val rate = bindingTutor.RateTutor.rating
                 bindingTutor.TutorNombre.setText(tutor.value!!.nombre)
                 bindingTutor.Carrera.setText(tutor.value!!.carrera)
-                //bindingTutor.Cursos.setText(tutor.value!!.cursos)
+                // como pongo el list del usuario aqui
+                bindingTutor.Cursos.setText(tutor.value!!.cursos.toString())
                 bindingTutor.Contacto.setText(tutor.value!!.contacto)
                 bindingTutor.BotonGuardar.setOnClickListener(){
                     val comentario=bindingTutor.CajaComentarios.toString()
