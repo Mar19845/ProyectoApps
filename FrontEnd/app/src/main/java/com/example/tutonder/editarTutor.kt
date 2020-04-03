@@ -37,7 +37,7 @@ class editarTutor : Fragment() {
                 if(usuario.value == null){
                     Toast.makeText(context,"No se ha encontrado al usuario :(", Toast.LENGTH_LONG).show()
                 }else{
-                    
+
                 }
             })
         }

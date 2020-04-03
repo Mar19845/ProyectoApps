@@ -37,6 +37,20 @@ app.get('/usuarios/:id', (req, res)=>{
     }
     res.send(JSON.stringify(usuario1));
 });
+app.get('/usuarios/:cursos', (req, res)=>{
+    var usuarios = database.users;
+    var usuario1 =  {"users":[]}
+    for(i in usuarios){
+        usuario = usuarios[i];
+        if(usuario.cursos == req.params.cursos){
+            usuario1.users.push(usuario)
+        }
+    }
+    res.send(JSON.stringify(usuario1));
+});
+
+    res.send(JSON.stringify(usuario1));
+});
 
 const PORT = process.env.PORT || 5000;
 

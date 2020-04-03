@@ -37,7 +37,7 @@ class ListaTutores : Fragment() {
         })
 
         bindingListaTutores.button2.setOnClickListener() {
-            viewModel.getUser(bindingListaTutores.editText.text.toString())
+            viewModel.getCursos(bindingListaTutores.editText.text.toString())
             Toast.makeText(context, tutor.value.toString(), Toast.LENGTH_SHORT).show()
 
             if (tutor.value == null) {

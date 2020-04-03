@@ -19,8 +19,8 @@ class ListaViewModel : ViewModel() {
         Log.i("Request", "Tutors List")
     }
 
-    fun getUser(id:String){
-        TutoApi.retrofitService.getUsers().enqueue(object: Callback<List<User>> {
+    fun getCursos(cursos:String){
+        TutoApi.retrofitService.getCursos(cursos).enqueue(object: Callback<List<User>> {
             override fun onResponse(call: Call<List<User>>, response: Response<List<User>>) {
                 if(response.isSuccessful){
                     //Guarda la lista de usuarios
