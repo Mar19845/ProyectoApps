@@ -7,6 +7,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 import retrofit2.Call
+import retrofit2.http.POST
 import retrofit2.http.Path
 
 private const val BASE_URL = "https://1317841e.ngrok.io/"
@@ -31,6 +32,8 @@ interface GitApiService {
 
     @GET("usuarios/{id}")
     fun getUser(@Path("id") id: String): Call<User>
+    @POST("usuarios/{id}")
+    fun postUser(@Path("id") id: String): Call<User>
 
 }
 
