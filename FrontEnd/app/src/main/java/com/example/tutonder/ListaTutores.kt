@@ -30,20 +30,16 @@ class ListaTutores : Fragment() {
 
 
         viewModel = ViewModelProviders.of(this).get(ListaViewModel::class.java)
-        val usuario: LiveData<User> = viewModel.userResponse
+        val tutor: LiveData<List<User>> = viewModel.userResponse
 
-        bindingListaTutores.botonIngresar.setOnClickListener(){
-            viewModel.getUser(bindingListaTutores.Usuario.text.toString())
-            usuario.observe(viewLifecycleOwner, Observer {
-                Toast.makeText(context, usuario.value.toString(), Toast.LENGTH_SHORT).show()
-                if(usuario.value == null){
+        bindingListaTutores.button2.setOnClickListener(){
+            viewModel.getUser(bindingListaTutores.editText.text.toString())
+            tutor.observe(viewLifecycleOwner, Observer {
+                Toast.makeText(context, tutor.value.toString(), Toast.LENGTH_SHORT).show()
+                if(tutor.value == null){
                     Toast.makeText(context,"No se ha encontrado al usuario :(", Toast.LENGTH_LONG).show()
                 }else{
-                    if(usuario.value!!.password ==  bindingListaTutores.Contrasena.text.toString()){bindingListaTutores
-                        Toast.makeText(context,"Logged :)", Toast.LENGTH_SHORT).show()
-                    }else{
-                        Toast.makeText(context,"Parece que tu contrasena es incorrecta...", Toast.LENGTH_LONG).show()
-                    }
+                    Toast.makeText(context,"Se encuentra el usuario :(", Toast.LENGTH_LONG).show()
                 }
             })
         }
