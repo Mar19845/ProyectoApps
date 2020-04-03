@@ -3,6 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".Tutor">
+    <data>
+        <variable
+            name="encuestaViewModel"
+            type="com.example.tutonder.TutorViewModel">
+
+        </variable>
+    </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -159,21 +166,21 @@
 
         <TextView
             android:id="@+id/Contacto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="56dp"
+            android:layout_height="18dp"
             android:text="     "
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.277"
+            app:layout_constraintHorizontal_bias="0.319"
             app:layout_constraintStart_toEndOf="@+id/iConctactoTutor"
             app:layout_constraintTop_toBottomOf="@+id/Cursos" />
 
         <TextView
             android:id="@+id/Cursos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="49dp"
+            android:layout_height="15dp"
             android:text="     "
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.309"
+            app:layout_constraintHorizontal_bias="0.345"
             app:layout_constraintStart_toEndOf="@+id/iCursosDados"
             app:layout_constraintTop_toBottomOf="@+id/Carrera" />
     </androidx.constraintlayout.widget.ConstraintLayout>
