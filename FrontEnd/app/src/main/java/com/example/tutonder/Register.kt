@@ -39,25 +39,14 @@ class Register : Fragment() {
             //viewModel.getText(id,nom,carr,cont,pass1,pass2)
         }
 
-        val bindingLogin = DataBindingUtil.inflate<FragmentLoginBinding>(inflater,
-            R.layout.fragment_login,container,false)
-
         viewModel = ViewModelProviders.of(this).get(RegisterViewModel::class.java)
-        val usuario: LiveData<User> = viewModel.userResponse
+        val NuevoTutor: LiveData<User> = viewModel.userResponse
 
-        bindingRegister.botonIngresar.setOnClickListener(){
+        bindingRegister.button3.setOnClickListener(){
             viewModel.getUser(bindingRegister.Usuario.text.toString())
-            usuario.observe(viewLifecycleOwner, Observer {
-                Toast.makeText(context, usuario.value.toString(), Toast.LENGTH_SHORT).show()
-                if(usuario.value == null){
-                    Toast.makeText(context,"No se ha encontrado al usuario :(", Toast.LENGTH_LONG).show()
-                }else{
-                    if(usuario.value!!.password == bindingLogin.Contrasena.text.toString()){
-                        Toast.makeText(context,"Logged :)", Toast.LENGTH_SHORT).show()
-                    }else{
-                        Toast.makeText(context,"Parece que tu contrasena es incorrecta...", Toast.LENGTH_LONG).show()
-                    }
-                }
+            NuevoTutor.observe(viewLifecycleOwner, Observer {
+                Toast.makeText(context, NuevoTutor.value.toString(), Toast.LENGTH_SHORT).show()
+
             })
         }
 

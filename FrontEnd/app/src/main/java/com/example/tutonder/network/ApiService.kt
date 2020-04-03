@@ -31,6 +31,7 @@ interface GitApiService {
 
     @GET("usuarios/{id}")
     fun getUser(@Path("id") id: String): Call<User>
+
 }
 
 object TutoApi {
