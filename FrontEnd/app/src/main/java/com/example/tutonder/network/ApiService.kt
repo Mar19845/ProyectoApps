@@ -9,7 +9,7 @@ import retrofit2.http.GET
 import retrofit2.Call
 import retrofit2.http.Path
 
-private const val BASE_URL = "https://b1085e96.ngrok.io/"
+private const val BASE_URL = "https://1317841e.ngrok.io/"
 
 private val moshi = Moshi.Builder()
     .add(KotlinJsonAdapterFactory())
