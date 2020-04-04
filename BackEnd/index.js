@@ -11,11 +11,11 @@ app.get('/', (req, res)=>{
 
 app.get('/tutores', (req, res)=>{
     var usuarios = database.users;
-    var tutores = {"users":[]}
+    var tutores = []
     for(i in usuarios){
         usuario = usuarios[i];
         if(usuario.tipo){
-            tutores.users.push(usuario);
+            tutores.push(usuario);
         }
     }
 

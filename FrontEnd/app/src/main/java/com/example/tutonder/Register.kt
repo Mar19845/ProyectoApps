@@ -43,7 +43,7 @@ class Register : Fragment() {
         val NuevoTutor: LiveData<User> = viewModel.userResponse
 
         bindingRegister.button3.setOnClickListener(){
-            viewModel.getUser(bindingRegister.NuevoTutor.text.toString())
+            viewModel.getUser(bindingRegister.editTextNombre.text.toString())
             NuevoTutor.observe(viewLifecycleOwner, Observer {
                 Toast.makeText(context, NuevoTutor.value.toString(), Toast.LENGTH_SHORT).show()
 

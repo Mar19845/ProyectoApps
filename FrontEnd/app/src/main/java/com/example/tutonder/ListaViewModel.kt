@@ -19,8 +19,8 @@ class ListaViewModel : ViewModel() {
         Log.i("Request", "Tutors List")
     }
 
-    fun getUser(id:String){
-        TutoApi.retrofitService.getUsers().enqueue(object: Callback<List<User>> {
+    fun getTutores(){
+        TutoApi.retrofitService.getTutores().enqueue(object: Callback<List<User>> {
             override fun onResponse(call: Call<List<User>>, response: Response<List<User>>) {
                 if(response.isSuccessful){
                     //Guarda la lista de usuarios
@@ -28,7 +28,6 @@ class ListaViewModel : ViewModel() {
                 }else{
                 }
             }
-
             override fun onFailure(call: Call<List<User>>, t: Throwable) {
                 t?.printStackTrace()
             }
