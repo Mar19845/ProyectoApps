@@ -38,6 +38,8 @@ interface GitApiService {
     fun postUser(@Path("id") id: String): Call<User>
     @PUT("usuarios/{id}")
     fun putUser(@Path("id") id: String): Call<User>
+    @GET("usuarios/{cursos}")
+    fun getCursos(@Path("cursos") id: String): Call<List<User>>
 
 }
 
